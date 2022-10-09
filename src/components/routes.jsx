@@ -11,6 +11,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
+    loader: () => fetch("products.json"),
     children: [
       {
         path: "/",
