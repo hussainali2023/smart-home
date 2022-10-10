@@ -5,13 +5,14 @@ import Home from "./Home";
 import Shop from "./Shop";
 import Cart from "./Cart";
 import About from "./About";
+import { productsAndCartData } from "../loaders/getCartAndProductsData";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
-    loader: () => fetch("products.json"),
+    loader: productsAndCartData,
     children: [
       {
         path: "/",
