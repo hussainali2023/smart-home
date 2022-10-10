@@ -1,11 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { toast } from "react-toastify";
-import { ProductContext } from "../Root";
+import { CartContext, ProductContext } from "../Root";
 import { addToDb } from "../utils/fakeDB";
 import Product from "./Product";
 const Shop = () => {
   const products = useContext(ProductContext);
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useContext(CartContext);
   console.log(cart);
 
   const handleAddToCart = (product) => {
